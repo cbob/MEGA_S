@@ -320,9 +320,9 @@
 
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
   // Ultimaker
-  #define  DEFAULT_Kp 15//10//15.67
-  #define  DEFAULT_Ki   0.95// 0.54// 0.94
-  #define  DEFAULT_Kd 65.0//60.42//65.46
+  #define  DEFAULT_Kp 17.08
+  #define  DEFAULT_Ki 1.15
+  #define  DEFAULT_Kd 63.37
 
   // MakerGear
   //#define  DEFAULT_Kp 7.0
@@ -348,7 +348,7 @@
 // If your configuration is significantly different than this and you don't understand the issues involved, you probably
 // shouldn't use bed PID until someone else verifies your hardware works.
 // If this is enabled, find your own PID constants below.
-//#define PIDTEMPBED
+#define PIDTEMPBED
 
 //#define BED_LIMIT_SWITCHING
 
@@ -362,11 +362,15 @@
 
   //#define PID_BED_DEBUG // Sends debug data to the serial port.
 
+  #define  DEFAULT_bedKp 345.10
+  #define  DEFAULT_bedKi 67.51
+  #define  DEFAULT_bedKd 440.99
+
   //120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   //from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
-  #define  DEFAULT_bedKp 10.00
-  #define  DEFAULT_bedKi .023
-  #define  DEFAULT_bedKd 905.4
+  // #define  DEFAULT_bedKp 10.00
+  // #define  DEFAULT_bedKi .023
+  // #define  DEFAULT_bedKd 905.4
   
 
   //120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
@@ -498,7 +502,7 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2[, E3]]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 384 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 404 }
 
 /**
  * Default Max Feed Rate (mm/s)
